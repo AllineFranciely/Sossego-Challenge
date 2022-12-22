@@ -1,0 +1,125 @@
+.titleAddress {
+  margin-left: 3%;
+  margin-top: 30px;
+}
+
+.pageUserAddress{
+  margin-left: 27%;
+  padding-top: 4%;
+  width: 50%;
+}
+
+.boxUserAddress {
+  background-color: white;
+  border: solid 1px rgb(224, 222, 222);
+  border-radius: 1%;
+  height: 650px;
+  width: 900px;
+}
+
+.cepRua {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+}
+
+.formCep {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  width: 45%;
+}
+
+.formRua {
+  width: 50%;
+  margin-left: 5%;
+}
+
+.NumBairroCidade {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+}
+
+.formNumero {
+  width: 10%;
+  margin-left: 5%;
+}
+
+.formBairro {
+  margin-left: 40px;
+  width: 27%;
+}
+
+.formCidade {
+  margin-left: 70px;
+  width: 50%;
+}
+
+.formReferencia {
+  margin-left: 40px;
+  width: 95%;
+}
+
+.Inputcep {
+  background-color: rgb(245, 247, 248);
+  height: 23px;
+  width: 90%;
+}
+
+.InputRua {
+  background-color: rgb(245, 247, 248);
+  height: 23px;
+  width: 90%;
+}
+
+.InputNumero {
+  background-color: rgb(245, 247, 248);
+  height: 23px;
+  width: 90%;
+}
+
+
+.InputBairro {
+  background-color: rgb(245, 247, 248);
+  height: 23px;
+  width: 90%;
+}
+
+.InputCidade {
+  background-color: rgb(245, 247, 248);
+  height: 23px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.InputReferencia {
+  background-color: rgb(245, 247, 248);
+  height: 23px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.previousButtonAddress {
+  background-color: #8C98A9;
+  border-radius: 3%;
+  color: white;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  margin-left: 60%;
+  margin-top: 115px;
+}
+
+.nextButtonAddress {
+  background-color: #5357B1;
+  border-radius: 3%;
+  color: white;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  margin-left: 15px;
+  margin-top: 115px;
+}

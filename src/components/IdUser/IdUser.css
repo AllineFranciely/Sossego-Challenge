@@ -4,8 +4,8 @@
 }
 
 .pageUserId{
-  margin-left: 15%;
-  padding-top: 6%;
+  margin-left: 27%;
+  padding-top: 5%;
   width: 50%;
 }
 
@@ -76,7 +76,7 @@
   width: 90%;
 }
 
-.nextButton {
+.nextButtonId {
   background-color: #5357B1;
   border-radius: 3%;
   color: white;

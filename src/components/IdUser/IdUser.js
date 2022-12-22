@@ -88,7 +88,7 @@ function IdUser() {
         </form>
         <button
           type="button"
-          className="nextButton"
+          className="nextButtonId"
           onClick={() => navigate('/user-address')}
         >
           Próximo passo

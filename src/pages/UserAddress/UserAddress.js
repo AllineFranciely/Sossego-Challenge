@@ -1,10 +1,10 @@
 import React from 'react';
-import NavigateBar from '../../components/NavigateBar/NavigateBar';
+import AddressUser from '../../components/AddressUser/AddressUser';
 
 function UserAddress() {
   return (
-    <div>
-      <NavigateBar />
+    <div className="page">
+      <AddressUser />
     </div>
   );
 }
