@@ -6,7 +6,7 @@ function IdIcon() {
   return (
     <div className="IdIcon">
       <BiUser className="UserIcon"/>
-      <p>Identificação do Usuário</p>
+      <p>Identificação do usuário</p>
     </div>
   );
 }

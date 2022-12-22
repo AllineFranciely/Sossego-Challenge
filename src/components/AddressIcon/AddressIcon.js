@@ -6,7 +6,7 @@ function AddressIcon() {
   return (
     <div className="AddressIcon">
       <BsHouseDoor className="HouseIcon"/>
-      <p>Endereço do Usuário</p>
+      <p>Endereço do usuário</p>
     </div>
   );
 }

@@ -6,7 +6,7 @@ function AboutIcon() {
   return (
     <div className="AboutIcon">
       <BsCardText className="TextIcon"/>
-      <p>Identificação do Usuário</p>
+      <p>Sobre você</p>
     </div>
   );
 }
