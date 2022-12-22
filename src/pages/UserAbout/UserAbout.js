@@ -1,10 +1,11 @@
 import React from 'react';
-import NavigateBar from '../../components/NavigateBar/NavigateBar';
+import AboutUser from '../../components/AboutUser/AboutUser';
+import './UserAbout.css';
 
-function UserAbout() {
+function UserAbout () {
   return (
-    <div>
-      <NavigateBar />
+    <div className="page">
+      <AboutUser />
     </div>
   );
 }

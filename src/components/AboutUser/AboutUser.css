@@ -1,0 +1,55 @@
+.titleAbout {
+  margin-left: 3%;
+  margin-top: 30px;
+}
+
+.pageUserAbout {
+  margin-left: 27%;
+  padding-top: 4%;
+  width: 50%;
+}
+
+.boxUserAbout {
+  background-color: white;
+  border: solid 1px rgb(224, 222, 222);
+  border-radius: 1%;
+  height: 650px;
+  width: 900px;
+}
+
+.formAbout {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  width: 95%;
+}
+
+.InputAbout {
+  background-color: rgb(245, 247, 248);
+  height: 200px;
+  width: 90%;
+}
+
+.previousButtonAbout {
+  background-color: #8C98A9;
+  border-radius: 3%;
+  color: white;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  margin-left: 60%;
+  margin-top: 115px;
+}
+
+.nextButtonAbout {
+  background-color: #5357B1;
+  border-radius: 3%;
+  color: white;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  margin-left: 15px;
+  margin-top: 115px;
+}
