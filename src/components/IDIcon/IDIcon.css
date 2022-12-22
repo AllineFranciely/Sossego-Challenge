@@ -1,0 +1,10 @@
+.IdIcon {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+
+.UserIcon {
+  margin-right: 5px;
+  margin-top: 17px;
+}
