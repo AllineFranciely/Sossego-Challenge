@@ -1,0 +1,8 @@
+.navibar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  margin-right: 20%;
+  margin-top: 50px;
+}

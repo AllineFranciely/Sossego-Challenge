@@ -28,7 +28,7 @@ function IdUser() {
   return (
     <div className="pageUserId">
       <div className="boxUserId">
-        <h1>Criação de usuário</h1>
+        <h1 className="titleID">Criação de usuário</h1>
         <NavigateBar />
         <form className="Form">
           <div className="formName">
