@@ -1,0 +1,82 @@
+.pageUserId{
+  margin-left: 15%;
+  padding-top: 6%;
+  width: 50%;
+}
+
+.boxUserId {
+  background-color: white;
+  border: solid 1px rgb(90, 89, 89);
+  height: 650px;
+  width: 900px;
+}
+
+.formName {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+.senha {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+}
+
+.InputName {
+  background-color: rgb(245, 247, 248);
+  height: 23px;
+  width: 90%;
+}
+
+.formSenha {
+  width: 50%;
+  margin-left: 5%;
+}
+
+.emailBirth {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+}
+
+.formEmail {
+  width: 50%;
+  margin-left: 5%;
+}
+
+.formBirth {
+  margin-left: 40px;
+  width: 50%;
+}
+
+.InputPassword {
+  background-color: rgb(245, 247, 248);
+  height: 23px;
+  width: 90%;
+}
+
+
+.InputEmail {
+  background-color: rgb(245, 247, 248);
+  height: 23px;
+  width: 90%;
+}
+
+.InputBirth {
+  background-color: rgb(245, 247, 248);
+  height: 23px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.nextButton {
+  background-color: #5357B1;
+  color: white;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  margin-left: 83%;
+  margin-top: 115px;
+}
