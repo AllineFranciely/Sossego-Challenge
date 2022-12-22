@@ -1,0 +1,10 @@
+.AboutIcon {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+
+.TextIcon {
+  margin-right: 5px;
+  margin-top: 17px;
+}

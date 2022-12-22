@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import UserId from './pages/UserId/UserId';
+import UserAddress from './pages/UserAddress/UserAddress';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/userId" element={<UserId />} />
           <Route exact path="/" element={<Navigate to="/userId" replace />} />
+          <Route path="/userAddress" element={<UserAddress />} />
         </Routes>
       </BrowserRouter>
     </div>

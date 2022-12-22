@@ -1,0 +1,10 @@
+.AddressIcon {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+
+.HouseIcon {
+  margin-right: 5px;
+  margin-top: 17px;
+}

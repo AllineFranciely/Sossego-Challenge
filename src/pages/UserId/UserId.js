@@ -1,10 +1,10 @@
 import React from 'react';
-import IdIcon from '../../components/IDIcon/IDIcon';
+import NavigateBar from '../../components/NavigateBar/NavigateBar';
 
 function UserId() {
   return (
     <div>
-      <IdIcon />
+      <NavigateBar />
     </div>
   );
 }
