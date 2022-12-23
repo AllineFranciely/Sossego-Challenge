@@ -12,23 +12,23 @@ function AboutUser() {
   });
   const [error, setError] = useState({
     errorAbout: '',
-  })
+  });
   
   function handleOnChange({ target }) {
     const { type, value } = target;
-    if (type === 'text') {
+    if (type === 'textarea') {
       setAboutState(({
         sobre: value,
       }));
-      if (!AboutState.sobre || AboutState.sobre.length < 10 || AboutState.sobre.length > 100) {
+      if (!AboutState.sobre || AboutState.sobre.length < 10 || AboutState.sobre.length > 300) {
         setError(({
           errorAbout: 'O texto deve ter entre 10 e 100 caracteres',
-        }))
+        }));
       }
-      if (AboutState.sobre && AboutState.sobre.length > 9 && AboutState.sobre.length < 101) {
+      if (AboutState.sobre && AboutState.sobre.length > 9 && AboutState.sobre.length < 301) {
         setError(({
           errorAbout: '',
-        }))
+        }));
       }
     }
   }
@@ -53,7 +53,7 @@ function AboutUser() {
             defaultValue={AboutState.sobre}
             onChange={handleOnChange}
           />
-          {error.errorAbout&& <p>{error.errorAbout}</p>}
+          {error.errorAbout && <p>{error.errorAbout}</p>}
           </div>
         </form>
         <button

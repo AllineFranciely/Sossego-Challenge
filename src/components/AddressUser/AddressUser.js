@@ -71,9 +71,14 @@ function AddressUser() {
       setNumAddressState(({
         numero: value,
       }));
-      if (!numAddressState || numAddressState.length < 2) {
+      if (!numAddressState.numero || numAddressState.numero.length < 2) {
         setErrors(({
           errorNum: 'Informe o número da casa',
+        }));
+      }
+      if (numAddressState.numero && numAddressState.numero.length >= 1) {
+        setErrors(({
+          errorNum: '',
         }));
       }
     }
@@ -81,9 +86,14 @@ function AddressUser() {
       setBairroAddressState(({
         bairro: value,
       }));
-      if (!bairroAddressState || bairroAddressState.length < 3) {
+      if (!bairroAddressState.bairro || bairroAddressState.bairro.length < 3) {
         setErrors(({
           errorBairro: 'Preencha com o nome do bairro',
+        }));
+      }
+      if (bairroAddressState.bairro && bairroAddressState.bairro.length >= 2) {
+        setErrors(({
+          errorBairro: '',
         }));
       }
     }
@@ -91,9 +101,14 @@ function AddressUser() {
       setCidadeAddressState(({
         cidade: value,
       }));
-      if (!cidadeAddressState) {
+      if (!cidadeAddressState.cidade || cidadeAddressState.cidade.length < 3) {
         setErrors(({
           errorCidade: 'Preencha com o nome da cidade',
+        }));
+      }
+      if (cidadeAddressState.cidade && cidadeAddressState.cidade.length >= 2) {
+        setErrors(({
+          errorCidade: '',
         }));
       }
     }
@@ -101,9 +116,14 @@ function AddressUser() {
       setRefAddressState(({
         referencia: value,
       }));
-      if (!refAddressState) {
+      if (!refAddressState.referencia || refAddressState.referencia.length < 3) {
         setErrors(({
           errorRef: 'Preencha com alguma referência',
+        }));
+      }
+      if (refAddressState.referencia && refAddressState.referencia.length >= 2) {
+        setErrors(({
+          errorRef: '',
         }));
       }
     }
