@@ -10,16 +10,19 @@ function AboutUser() {
   const [AboutState, setAboutState] = useState({
     sobre: '',
   });
-  const { sobre } = AboutState;
+  
+  function handleOnChange({ target }) {
+    const { type, value } = target;
+    if (type === 'text') {
+      setAboutState(({
+        sobre: value,
+      }));
+    }
+  }
 
-  const handleChange = ({ target }) => {
-    const { name } = target;
-    let { value } = target;
-
-    setAboutState((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  function handleClick() {
+    localStorage.setItem('AboutState', JSON.stringify(AboutState));
+    navigate('/user-infos')
   }
 
   return (
@@ -34,8 +37,8 @@ function AboutUser() {
             type="text"
             className="InputAbout"
             name="sobre"
-            value={sobre}
-            onChange={handleChange}
+            value={AboutState.sobre}
+            onChange={handleOnChange}
           />
           </div>
         </form>
@@ -49,7 +52,7 @@ function AboutUser() {
         <button
           type="button"
           className="nextButtonAbout"
-          onClick={() => navigate('/user-infos')}
+          onClick={handleClick}
         >
           Próximo passo
         </button>

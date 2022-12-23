@@ -15,7 +15,9 @@ function IdUser() {
   });
   const [senha, setSenha] = useState('');
   const [senhaConfirm, setSenhaConfirm] = useState('');
-  const [nascimento, setNascimento] = useState('');
+  const [userNascimento, setUserNascimento] = useState({
+    nascimento: '',
+  });
 
   function handleOnChange({ target }) {
     const { type, value } = target;
@@ -30,14 +32,15 @@ function IdUser() {
     } else if (type === 'password') {
       setSenha(value);
     } else if (type === 'date') {
-      setNascimento(value);
+      setUserNascimento(value);
     }
   }
 
   function handleClick() {
     localStorage.setItem('userName', JSON.stringify(userName));
     localStorage.setItem('userEmail', JSON.stringify(userEmail));
-    console.log(userName);
+    localStorage.setItem('userNascimento', JSON.stringify(userNascimento));
+    // console.log(userName);
     navigate('/user-address')
   }
 
@@ -96,7 +99,7 @@ function IdUser() {
             type="date"
             className="InputBirth"
             name="nascimento"
-            value={nascimento}
+            value={userNascimento.nascimento}
             onChange={handleOnChange}
           />
           </div>

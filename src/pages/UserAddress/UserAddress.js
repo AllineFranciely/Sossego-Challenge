@@ -3,7 +3,7 @@ import AddressUser from '../../components/AddressUser/AddressUser';
 
 function UserAddress() {
   return (
-    <div className="page">
+    <div className="pageAddress">
       <AddressUser />
     </div>
   );

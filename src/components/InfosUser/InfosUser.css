@@ -1,0 +1,63 @@
+.titleInfos {
+  margin-left: 25%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.pageUserInfos {
+  margin-left: 35%;
+  padding-top: 7%;
+  width: 50%;
+}
+
+.boxUserInfos {
+  background-color: white;
+  border: solid 1px rgb(224, 222, 222);
+  border-radius: 1%;
+  height: 650px;
+  width: 470px;
+}
+
+.ruaNum {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  width: 100%;
+}
+
+.boxInfos {
+  margin-left: 40px;
+}
+
+.campo {
+  color: #8C98A9;
+}
+
+.campoNum {
+  color: #8C98A9;
+  margin-left: 230px;
+}
+
+.infoNum {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: 230px;
+}
+
+.info {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.novoUsuario {
+  background-color: #5357B1;
+  border-radius: 3%;
+  color: white;
+  padding-bottom: 10px;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 10px;
+  margin-left: 7%;
+  margin-top: 150px;
+  width: 400px;
+}

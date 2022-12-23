@@ -4,7 +4,7 @@ import './UserAbout.css';
 
 function UserAbout () {
   return (
-    <div className="page">
+    <div className="pageAbout">
       <AboutUser />
     </div>
   );

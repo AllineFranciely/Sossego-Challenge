@@ -7,24 +7,33 @@ function AddressUser() {
 
   const navigate = useNavigate();
 
-  const [AddressState, setAddressState] = useState({
+  const [cepAddressState, setCepAddressState] = useState({
     cep: '',
+  });
+  const [ruaAddressState, setRuaAddressState] = useState({
     rua: '',
+  });
+  const [numAddressState, setNumAddressState] = useState({
     numero: 0,
+  });
+  const [bairroAddressState, setBairroAddressState] = useState ({
     bairro: '',
+  });
+  const [cidadeAddressState, setCidadeAddressState] = useState ({
     cidade: '',
+  });
+  const [refAddressState, setRefAddressState] = useState ({
     referencia: '',
   });
-  const { cep, rua, numero, bairro, cidade, referencia } = AddressState;
 
-  const handleChange = ({ target }) => {
-    const { name } = target;
-    let { value } = target;
-
-    setAddressState((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  function handleClick() {
+    localStorage.setItem('cepAddressState', JSON.stringify(cepAddressState));
+    localStorage.setItem('ruaAddressState', JSON.stringify(ruaAddressState));
+    localStorage.setItem('numAddressState', JSON.stringify(numAddressState));
+    localStorage.setItem('bairroAddressState', JSON.stringify(bairroAddressState));
+    localStorage.setItem('cidadeAddressState', JSON.stringify(cidadeAddressState));
+    localStorage.setItem('refAddressState', JSON.stringify(refAddressState));
+    navigate('/user-about')
   }
 
   return (
@@ -40,8 +49,8 @@ function AddressUser() {
             type="text"
             className="Inputcep"
             name="cep"
-            value={cep}
-            onChange={handleChange}
+            value={cepAddressState.cep}
+            onChange={(event) => setCepAddressState(event.target.value)}
           />
           </div>
           <div className="formRua">
@@ -50,8 +59,8 @@ function AddressUser() {
             type="rua"
             className="InputRua"
             name="rua"
-            value={rua}
-            onChange={handleChange}
+            value={ruaAddressState.rua}
+            onChange={(event) => setRuaAddressState(event.target.value)}
           />
           </div>
           </div>
@@ -62,8 +71,8 @@ function AddressUser() {
             type="number"
             className="InputNumero"
             name="numero"
-            value={numero}
-            onChange={handleChange}
+            value={numAddressState.numero}
+            onChange={(event) => setNumAddressState(event.target.value)}
           />
           </div>
           <div className="formBairro">
@@ -72,8 +81,8 @@ function AddressUser() {
             type="text"
             className="InputBairro"
             name="bairro"
-            value={bairro}
-            onChange={handleChange}
+            value={bairroAddressState.bairro}
+            onChange={(event) => setBairroAddressState(event.target.value)}
           />
           </div>
           <div className="formCidade">
@@ -82,8 +91,8 @@ function AddressUser() {
             type="text"
             className="InputCidade"
             name="cidade"
-            value={cidade}
-            onChange={handleChange}
+            value={cidadeAddressState.cidade}
+            onChange={(event) => setCidadeAddressState(event.target.value)}
           />
           </div>
           </div>
@@ -93,8 +102,8 @@ function AddressUser() {
             type="text"
             className="InputReferencia"
             name="referencia"
-            value={referencia}
-            onChange={handleChange}
+            value={refAddressState.referencia}
+            onChange={(event) => setRefAddressState(event.target.value)}
           />
           </div>
         </form>
@@ -108,7 +117,7 @@ function AddressUser() {
         <button
           type="button"
           className="nextButtonAddress"
-          onClick={() => navigate('/user-about')}
+          onClick={handleClick}
         >
           Próximo passo
         </button>

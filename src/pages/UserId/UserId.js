@@ -4,7 +4,7 @@ import './UserId.css';
 
 function UserId () {
   return (
-    <div className="page">
+    <div className="pageId">
       <IdUser />
     </div>
   );
