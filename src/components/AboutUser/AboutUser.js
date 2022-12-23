@@ -34,10 +34,10 @@ function AboutUser() {
           <div className="formAbout">
           <p>Nos conte mais sobre você</p>
           <textarea
-            type="text"
+            type="texarea"
             className="InputAbout"
             name="sobre"
-            value={AboutState.sobre}
+            defaultValue={AboutState.sobre}
             onChange={handleOnChange}
           />
           </div>
