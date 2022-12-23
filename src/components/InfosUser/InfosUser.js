@@ -8,7 +8,7 @@ function InfosUser() {
   const [userName, setUserName] = useState('default');
   const [userEmail, setUserEmail] = useState('emaildefault@email.com');
   const [ruaAddressState, setRuaAddressState] = useState('ruaDefault');
-  const [numAddressState, setNumAddressState] = useState();
+  const [numAddressState, setNumAddressState] = useState('0');
   const [cepAddressState, setCepAddressState] = useState('00000-000');
   const nameUser = localStorage.getItem('userName');
   const emailUser = localStorage.getItem('userEmail');

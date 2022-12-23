@@ -1,5 +1,6 @@
 import React from 'react';
 import AddressUser from '../../components/AddressUser/AddressUser';
+import './UserAddress.css';
 
 function UserAddress() {
   return (

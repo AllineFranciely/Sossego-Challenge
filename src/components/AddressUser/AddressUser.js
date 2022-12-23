@@ -14,15 +14,15 @@ function AddressUser() {
     rua: '',
   });
   const [numAddressState, setNumAddressState] = useState({
-    numero: 0,
+    numero: '',
   });
-  const [bairroAddressState, setBairroAddressState] = useState ({
+  const [bairroAddressState, setBairroAddressState] = useState({
     bairro: '',
   });
-  const [cidadeAddressState, setCidadeAddressState] = useState ({
+  const [cidadeAddressState, setCidadeAddressState] = useState({
     cidade: '',
   });
-  const [refAddressState, setRefAddressState] = useState ({
+  const [refAddressState, setRefAddressState] = useState({
     referencia: '',
   });
 
@@ -67,6 +67,7 @@ function AddressUser() {
     localStorage.setItem('bairroAddressState', JSON.stringify(bairroAddressState));
     localStorage.setItem('cidadeAddressState', JSON.stringify(cidadeAddressState));
     localStorage.setItem('refAddressState', JSON.stringify(refAddressState));
+    console.log(numAddressState);
     navigate('/user-about')
   }
 
@@ -77,68 +78,68 @@ function AddressUser() {
         <NavigateBar />
         <form className="FormAddress">
           <div className="cepRua">
-          <div className="formCep">
-          <p>CEP</p>
-          <input
-            type="text"
-            className="Inputcep"
-            name="cep"
-            value={cepAddressState.cep}
-            onChange={handleOnChange}
-          />
-          </div>
-          <div className="formRua">
-          <p>Rua</p>
-          <input
-            type="rua"
-            className="InputRua"
-            name="rua"
-            value={ruaAddressState.rua}
-            onChange={handleOnChange}
-          />
-          </div>
+            <div className="formCep">
+              <p>CEP</p>
+              <input
+                type="text"
+                className="Inputcep"
+                name="cep"
+                value={cepAddressState.cep}
+                onChange={handleOnChange}
+              />
+            </div>
+            <div className="formRua">
+              <p>Rua</p>
+              <input
+                type="rua"
+                className="InputRua"
+                name="rua"
+                value={ruaAddressState.rua}
+                onChange={handleOnChange}
+              />
+            </div>
           </div>
           <div className="NumBairroCidade">
-          <div className="formNumero">
-          <p>Número</p>
-          <input
-            type="number"
-            className="InputNumero"
-            name="numero"
-            value={numAddressState.numero}
-            onChange={handleOnChange}
-          />
-          </div>
-          <div className="formBairro">
-          <p>Bairro</p>
-          <input
-            type="text"
-            className="InputBairro"
-            name="bairro"
-            value={bairroAddressState.bairro}
-            onChange={handleOnChange}
-          />
-          </div>
-          <div className="formCidade">
-          <p>Cidade</p>
-          <input
-            type="text"
-            className="InputCidade"
-            name="cidade"
-            value={cidadeAddressState.cidade}
-            onChange={handleOnChange}
-          />
-          </div>
+            <div className="formNumero">
+              <p>Número</p>
+              <input
+                type="text"
+                className="InputNumero"
+                name="numero"
+                value={numAddressState.numero}
+                onChange={handleOnChange}
+              />
+            </div>
+            <div className="formBairro">
+              <p>Bairro</p>
+              <input
+                type="text"
+                className="InputBairro"
+                name="bairro"
+                value={bairroAddressState.bairro}
+                onChange={handleOnChange}
+              />
+            </div>
+            <div className="formCidade">
+              <p>Cidade</p>
+              <input
+                type="text"
+                className="InputCidade"
+                name="cidade"
+                value={cidadeAddressState.cidade}
+                onChange={handleOnChange}
+              />
+            </div>
           </div>
           <div className="formReferencia">
-          <p>Ponto de Referência</p>
-          <input
-            type="text"
-            className="InputReferencia"
-            name="referencia"
-            value={refAddressState.referencia}
-            onChange={handleOnChange}
-          />
+            <p>Ponto de Referência</p>
+            <input
+              type="text"
+              className="InputReferencia"
+              name="referencia"
+              value={refAddressState.referencia}
+              onChange={handleOnChange}
+            />
           </div>
         </form>
         <button
