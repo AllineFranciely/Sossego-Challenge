@@ -29,7 +29,6 @@ function IdUser() {
       }));
     } else if (type === 'password') {
       setSenha(value);
-      setSenhaConfirm(value);
     } else if (type === 'date') {
       setNascimento(value);
     }
@@ -76,7 +75,7 @@ function IdUser() {
             className="InputPassword"
             name="senhaConfirm"
             value={senhaConfirm}
-            onChange={handleOnChange}
+            onChange={(event) => setSenhaConfirm(event.target.value)}
           />
           </div>
           </div>

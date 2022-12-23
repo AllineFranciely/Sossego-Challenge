@@ -5,20 +5,32 @@ import './InfosUser.css';
 function InfosUser() {
 
   const navigate = useNavigate();
+  const [userName, setUserName] = useState('default');
+  const [userEmail, setUserEmail] = useState('emaildefault@email.com');
+  const nameUser = localStorage.getItem('userName');
+  const emailUser = localStorage.getItem('userEmail');
 
-  const nameUser = localStorage.getItem('nome');
-  const emailUser = localStorage.getItem('email');
-
+  useEffect(() => {
+    if (nameUser) {
+      const { nome } = JSON.parse(nameUser); // estrutura retornada sem o JSON.parse: {"email":"alline_franciely@hotmail.com"}
+      setUserName(nome);
+    }
+    if (emailUser) {
+      const { email } = JSON.parse(emailUser); // estrutura retornada sem o JSON.parse: {"email":"alline_franciely@hotmail.com"}
+      setUserEmail(email);
+    }
+  }, []);
 
   return (
     <div className="pageUserInfos">
       <div className="boxUserInfos">
         <h1 className="titleInfos">Usuário criado!</h1>
         <div>
-          <p>Nome {nameUser}</p>
+          <p>Nome</p>
+          <p>{userName}</p>
           
           <p>Email</p>
-          {emailUser}
+          <p>{userEmail}</p>
         </div>
         <button
           type="button"
