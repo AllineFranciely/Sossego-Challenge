@@ -13,8 +13,12 @@ function IdUser() {
   const [userEmail, setUserEmail] = useState({
     email: '',
   });
-  const [senha, setSenha] = useState('');
-  const [senhaConfirm, setSenhaConfirm] = useState('');
+  const [userSenha, setUserSenha] = useState({
+    senha: '',
+  });
+  const [userSenhaConfirm, setUserSenhaConfirm] = useState({
+    senhaConfirm: '',
+  });
   const [userNascimento, setUserNascimento] = useState({
     nascimento: '',
   });
@@ -24,7 +28,7 @@ function IdUser() {
     errorSenha: '',
     errorSenhaConfirm: '',
     errorNascimento: '',
-  })
+  });
 
   function handleOnChange({ target }) {
     const emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i;
@@ -38,6 +42,11 @@ function IdUser() {
           errorName: 'O nome deve ter no mínimo 3 caracteres',
         }));
       }
+      if (userName.nome && userName.nome.length >= 2) {
+        setErrors(({
+          errorName: '',
+        }));
+      }
     } else if (type === 'email') {
       setUserEmail(({
         email: value,
@@ -47,25 +56,51 @@ function IdUser() {
           errorEmail: 'Informe um email válido',
         }));
       }
+      if (userEmail.email && userEmail.email === emailRegex) {
+        setErrors(({
+          errorEmail: '',
+        }));
+      }
     } else if (type === 'password') {
-      setSenha(value);
-      if (!senha || senha < 5) {
+      setUserSenha(({
+        senha: value,
+      }));
+      if (!userSenha.senha || userSenha.senha.length < 5) {
         setErrors(({
           errorSenha: 'A senha deve ter no mínimo 5 caracteres'
         }));
       }
+      if (userSenha.senha && userSenha.senha.length >= 4) {
+        setErrors(({
+          errorSenha: '',
+        }));
+      }
     } else if (name === 'senhaConfirm') {
-      setSenhaConfirm(value);
-      if (!senhaConfirm || senhaConfirm !== senha) {
+      setUserSenhaConfirm(({
+        senhaConfirm: value,
+      }));
+      if (!userSenhaConfirm.senhaConfirm || userSenhaConfirm.senhaConfirm !== userSenha.senha) {
         setErrors(({
           errorSenhaConfirm: 'As senhas devem ser iguais',
         }));
       }
+      if (userSenhaConfirm.senhaConfirm && userSenhaConfirm.senhaConfirm === userSenha.senha) {
+        setErrors(({
+          errorSenhaConfirm: '',
+        }));
+      }
     } else if (type === 'date') {
-      setUserNascimento(value);
+      setUserNascimento(({
+        nascimento: value,
+      }));
       if (!userNascimento) {
         setErrors(({
           errorNascimento: 'Preencha com a data de nascimento'
+        }));
+      }
+      if (userNascimento) {
+        setErrors(({
+          errorNascimento: '',
         }));
       }
     }
@@ -103,7 +138,7 @@ function IdUser() {
                 type="password"
                 className="InputPassword"
                 name="senha"
-                value={senha}
+                value={userSenha.senha}
                 onChange={handleOnChange}
               />
               {errors.errorSenha && <p>{errors.errorSenha}</p>}
@@ -114,8 +149,8 @@ function IdUser() {
                 type="password"
                 className="InputPassword"
                 name="senhaConfirm"
-                value={senhaConfirm}
-                onChange={(event) => setSenhaConfirm(event.target.value)}
+                value={userSenhaConfirm.senhaConfirm}
+                onChange={handleOnChange}
               />
               {errors.errorSenhaConfirm && <p>{errors.errorSenhaConfirm}</p>}
             </div>

@@ -5,7 +5,7 @@
 
 .pageUserAddress{
   margin-left: 27%;
-  padding-top: 6%;
+  padding-top: 5%;
   width: 50%;
 }
 
@@ -13,7 +13,7 @@
   background-color: white;
   border: solid 1px rgb(224, 222, 222);
   border-radius: 1%;
-  height: 650px;
+  height: 700px;
   width: 900px;
 }
 
@@ -109,7 +109,7 @@
   padding-right: 50px;
   padding-top: 10px;
   margin-left: 60%;
-  margin-top: 115px;
+  margin-top: 90px;
 }
 
 .nextButtonAddress {
@@ -121,5 +121,5 @@
   padding-right: 30px;
   padding-top: 10px;
   margin-left: 15px;
-  margin-top: 115px;
+  margin-top: 80px;
 }

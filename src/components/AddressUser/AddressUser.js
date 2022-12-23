@@ -26,37 +26,76 @@ function AddressUser() {
     referencia: '',
   });
 
+  const [errors, setErrors] = useState({
+    errorCEP: '',
+    errorRua: '',
+    errorNum: '',
+    errorBairro: '',
+    errorCidade: '',
+    errorRef: '',
+  });
+
   function handleOnChange({ target }) {
     const { name, value } = target;
     if (name === 'cep') {
       setCepAddressState(({
         cep: value,
       }));
+      if (!cepAddressState.cep || cepAddressState.cep < 9) {
+        setErrors(({
+          errorCEP: 'O CEP deve ter no mínimo 9 caracteres e formato 00000-000',
+        }));
+      }
     }
     if (name === 'rua') {
       setRuaAddressState(({
         rua: value,
       }));
+      if (!ruaAddressState.rua) {
+        setErrors(({
+          errorRua: 'Preencha com o nome da rua',
+        }));
+      }
     }
     if (name === 'numero') {
       setNumAddressState(({
         numero: value,
       }));
+      if (!numAddressState || numAddressState.length < 2) {
+        setErrors(({
+          errorNum: 'Informe o número da casa',
+        }));
+      }
     }
     if (name === 'bairro') {
       setBairroAddressState(({
         bairro: value,
       }));
+      if (!bairroAddressState) {
+        setErrors(({
+          errorBairro: 'Preencha com o nome do bairro',
+        }));
+      }
     }
     if (name === 'cidade') {
       setCidadeAddressState(({
         cidade: value,
       }));
+      if (!cidadeAddressState) {
+        setErrors(({
+          errorCidade: 'Preencha com o nome da cidade',
+        }));
+      }
     }
     if (name === 'referencia') {
       setRefAddressState(({
         referencia: value,
       }));
+      if (!refAddressState) {
+        setErrors(({
+          errorRef: 'Preencha com alguma referência',
+        }));
+      }
     }
   }
 
@@ -87,6 +126,7 @@ function AddressUser() {
                 value={cepAddressState.cep}
                 onChange={handleOnChange}
               />
+              {errors.errorCEP && <p>{errors.errorCEP}</p>}
             </div>
             <div className="formRua">
               <p>Rua</p>
@@ -97,6 +137,7 @@ function AddressUser() {
                 value={ruaAddressState.rua}
                 onChange={handleOnChange}
               />
+              {errors.errorRua && <p>{errors.errorRua}</p>}
             </div>
           </div>
           <div className="NumBairroCidade">
@@ -109,6 +150,7 @@ function AddressUser() {
                 value={numAddressState.numero}
                 onChange={handleOnChange}
               />
+              {errors.errorNum && <p>{errors.errorNum}</p>}
             </div>
             <div className="formBairro">
               <p>Bairro</p>
@@ -119,6 +161,7 @@ function AddressUser() {
                 value={bairroAddressState.bairro}
                 onChange={handleOnChange}
               />
+              {errors.errorBairro && <p>{errors.errorBairro}</p>}
             </div>
             <div className="formCidade">
               <p>Cidade</p>
@@ -129,6 +172,7 @@ function AddressUser() {
                 value={cidadeAddressState.cidade}
                 onChange={handleOnChange}
               />
+              {errors.errorCidade && <p>{errors.errorCidade}</p>}
             </div>
           </div>
           <div className="formReferencia">
@@ -140,6 +184,7 @@ function AddressUser() {
               value={refAddressState.referencia}
               onChange={handleOnChange}
             />
+            {errors.errorRef && <p>{errors.errorRef}</p>}
           </div>
         </form>
         <button
