@@ -70,3 +70,38 @@
     padding-top: 5%;
   }
 }
+
+/* Para telas pequena / laptops */
+@media only screen and (max-width: 1024px)
+{
+  .pageUserInfos {
+    margin-left: 25%;
+    padding-top: 10%;
+  }
+}
+
+/* Para telas pequena / laptops */
+@media only screen and (max-width: 912px)
+{
+  .pageUserInfos {
+    padding-top: 30%;
+  }
+}
+
+/* Para Tablet */
+@media only screen and (max-width: 768px)
+{
+  .pageUserInfos {
+    margin-left: 20%;
+    padding-top: 20%;
+  }
+}
+
+/* Para mobile */
+@media only screen and (max-width: 600px)
+{
+  .pageUserInfos {
+    margin-left: 7%;
+    padding-top: 5%;
+  }
+}

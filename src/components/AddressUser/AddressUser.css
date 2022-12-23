@@ -132,3 +132,72 @@
     padding-top: 4%;
   }
 }
+
+/* Para telas pequena / laptops */
+@media only screen and (max-width: 1024px)
+{
+  .pageUserAddress {
+    margin-left: 6%;
+    padding-top: 10%;
+  }
+}
+
+/* Para telas pequena / laptops */
+@media only screen and (max-width: 912px)
+{
+  .pageUserAddress {
+    margin-left: 11%;
+    padding-top: 30%;
+  }
+
+  .boxUserAddress {
+    height: 720px;
+    width: 700px;
+  }
+  
+  .previousButtonAddress {
+    margin-left: 50%;
+    margin-top: 80px;
+  }
+}
+
+/* Para Tablet */
+@media only screen and (max-width: 768px)
+{
+  .pageUserAddress {
+    padding-top: 20%;
+  }
+
+  .boxUserAddress {
+    height: 720px;
+    width: 600px;
+  }
+  
+  .previousButtonAddress {
+    margin-left: 40%;
+    margin-top: 80px;
+  }
+}
+
+/* Para mobile */
+@media only screen and (max-width: 600px)
+{
+  .pageUserAddress {
+    padding-top: 5%;
+  }
+
+  .boxUserAddress {
+    height: 700px;
+    margin-left: 5%;
+    width: 400px;
+  }
+  
+  .previousButtonAddress {
+    margin-left: 12%;
+    margin-top: 80px;
+  }
+
+  .formReferencia {
+    margin-left: 25px;
+  }
+}

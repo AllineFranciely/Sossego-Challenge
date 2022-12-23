@@ -2,3 +2,27 @@
   background-color: rgb(240, 243, 243);
   height: 890px;
 }
+
+/* Para telas pequena / laptops */
+@media only screen and (max-width: 912px)
+{
+  .pageInfos {
+    height: 1370px;
+  }
+}
+
+/* Para Tablet */
+@media only screen and (max-width: 768px)
+{
+  .pageInfos {
+    height: 1030px;
+  }
+}
+
+/* Para mobile */
+@media only screen and (max-width: 600px)
+{
+  .pageInfos {
+    height: 720px;
+  }
+}

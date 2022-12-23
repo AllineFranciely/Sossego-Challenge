@@ -42,7 +42,7 @@ function AboutUser() {
     <div className="pageUserAbout">
       <div className="boxUserAbout">
         <h1 className="titleAbout">Criação de usuário</h1>
-        <NavigateBar />
+        <NavigateBar className="naviAbout"/>
         <form className="FormAbout">
           <div className="formAbout">
           <p>Nos conte mais sobre você</p>
