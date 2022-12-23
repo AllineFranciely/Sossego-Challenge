@@ -61,3 +61,12 @@
   margin-top: 120px;
   width: 400px;
 }
+
+/* Para telas grandes */
+@media only screen and (max-width: 1280px)
+{
+  .pageUserInfos {
+    margin-left: 35%;
+    padding-top: 5%;
+  }
+}

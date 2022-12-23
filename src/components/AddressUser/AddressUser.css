@@ -123,3 +123,12 @@
   margin-left: 15px;
   margin-top: 80px;
 }
+
+/* Para telas grandes */
+@media only screen and (max-width: 1280px)
+{
+  .pageUserAddress {
+    margin-left: 15%;
+    padding-top: 4%;
+  }
+}

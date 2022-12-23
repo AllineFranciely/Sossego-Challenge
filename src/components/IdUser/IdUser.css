@@ -87,3 +87,11 @@
   margin-left: 80%;
   margin-top: 90px;
 }
+
+/* Para telas grandes */
+@media only screen and (max-width: 1280px)
+{
+  .pageUserId {
+    margin-left: 15%;
+  }
+}

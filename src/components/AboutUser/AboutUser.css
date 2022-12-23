@@ -53,3 +53,39 @@
   margin-left: 15px;
   margin-top: 80px;
 }
+
+/* Para telas grandes */
+@media only screen and (max-width: 1280px)
+{
+  .pageUserAbout {
+    margin-left: 15%;
+  }
+}
+
+/* Para telas pequena / laptops */
+@media only screen and (max-width: 1024px)
+{
+  
+}
+
+/* Para Tablet */
+@media only screen and (max-width: 768px)
+{
+  
+}
+
+/* Para mobile */
+@media only screen and (max-width: 600px)
+{
+  
+}
+
+@media only screen and (max-width: 420px)
+  {
+  
+  }
+
+  @media only screen and (max-width: 300px)
+  {
+
+  }
