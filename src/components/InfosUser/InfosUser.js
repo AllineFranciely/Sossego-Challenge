@@ -8,7 +8,7 @@ function InfosUser() {
   const [userName, setUserName] = useState('default');
   const [userEmail, setUserEmail] = useState('emaildefault@email.com');
   const [ruaAddressState, setRuaAddressState] = useState('ruaDefault');
-  const [numAddressState, setNumAddressState] = useState(0);
+  const [numAddressState, setNumAddressState] = useState();
   const [cepAddressState, setCepAddressState] = useState('00000-000');
   const nameUser = localStorage.getItem('userName');
   const emailUser = localStorage.getItem('userEmail');
@@ -18,11 +18,11 @@ function InfosUser() {
 
   useEffect(() => {
     if (nameUser) {
-      const { nome } = JSON.parse(nameUser); // estrutura retornada sem o JSON.parse: {"email":"alline_franciely@hotmail.com"}
+      const { nome } = JSON.parse(nameUser);
       setUserName(nome);
     }
     if (emailUser) {
-      const { email } = JSON.parse(emailUser); // estrutura retornada sem o JSON.parse: {"email":"alline_franciely@hotmail.com"}
+      const { email } = JSON.parse(emailUser);
       setUserEmail(email);
     }
     if (ruaAddressState) {
