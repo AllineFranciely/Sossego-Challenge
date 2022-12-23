@@ -7,22 +7,39 @@ function IdUser() {
 
   const navigate = useNavigate();
 
-  const [IdState, setIdState] = useState({
+  const [userName, setUserName] = useState({
     nome: '',
-    senha: '',
-    email: '',
-    nascimento: '',
   });
-  const { nome, senha, email, nascimento } = IdState;
+  const [userEmail, setUserEmail] = useState({
+    email: '',
+  });
+  const [senha, setSenha] = useState('');
+  const [senhaConfirm, setSenhaConfirm] = useState('');
+  const [nascimento, setNascimento] = useState('');
 
-  const handleChange = ({ target }) => {
-    const { name } = target;
-    let { value } = target;
+  function handleOnChange({ target }) {
+    const { type, value } = target;
+    if (type === 'text') {
+      setUserName(({
+        nome: value,
+      }));
+    } else if (type === 'email') {
+      setUserEmail(({
+        email: value,
+      }));
+    } else if (type === 'password') {
+      setSenha(value);
+      setSenhaConfirm(value);
+    } else if (type === 'date') {
+      setNascimento(value);
+    }
+  }
 
-    setIdState((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  function handleClick() {
+    localStorage.setItem('userName', JSON.stringify(userName));
+    localStorage.setItem('userEmail', JSON.stringify(userEmail));
+    console.log(userName);
+    navigate('/user-address')
   }
 
   return (
@@ -37,8 +54,8 @@ function IdUser() {
             type="text"
             className="InputName"
             name="nome"
-            value={nome}
-            onChange={handleChange}
+            value={userName.nome}
+            onChange={handleOnChange}
           />
           </div>
           <div className="senha">
@@ -49,7 +66,7 @@ function IdUser() {
             className="InputPassword"
             name="senha"
             value={senha}
-            onChange={handleChange}
+            onChange={handleOnChange}
           />
           </div>
           <div className="formSenha">
@@ -57,9 +74,9 @@ function IdUser() {
           <input
             type="password"
             className="InputPassword"
-            name="senha"
-            value={senha}
-            onChange={handleChange}
+            name="senhaConfirm"
+            value={senhaConfirm}
+            onChange={handleOnChange}
           />
           </div>
           </div>
@@ -67,11 +84,11 @@ function IdUser() {
           <div className="formEmail">
           <p>Email</p>
           <input
-            type="text"
+            type="email"
             className="InputEmail"
             name="email"
-            value={email}
-            onChange={handleChange}
+            value={userEmail.email}
+            onChange={handleOnChange}
           />
           </div>
           <div className="formBirth">
@@ -81,7 +98,7 @@ function IdUser() {
             className="InputBirth"
             name="nascimento"
             value={nascimento}
-            onChange={handleChange}
+            onChange={handleOnChange}
           />
           </div>
           </div>
@@ -89,7 +106,7 @@ function IdUser() {
         <button
           type="button"
           className="nextButtonId"
-          onClick={() => navigate('/user-address')}
+          onClick={handleClick}
         >
           Próximo passo
         </button>

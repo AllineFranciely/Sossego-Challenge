@@ -30,7 +30,7 @@ function AboutUser() {
         <form className="FormAbout">
           <div className="formAbout">
           <p>Nos conte mais sobre você</p>
-          <input
+          <textarea
             type="text"
             className="InputAbout"
             name="sobre"
