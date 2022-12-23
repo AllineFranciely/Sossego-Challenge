@@ -10,6 +10,9 @@ function AboutUser() {
   const [AboutState, setAboutState] = useState({
     sobre: '',
   });
+  const [error, setError] = useState({
+    errorAbout: '',
+  })
   
   function handleOnChange({ target }) {
     const { type, value } = target;
@@ -17,6 +20,16 @@ function AboutUser() {
       setAboutState(({
         sobre: value,
       }));
+      if (!AboutState.sobre || AboutState.sobre.length < 10 || AboutState.sobre.length > 100) {
+        setError(({
+          errorAbout: 'O texto deve ter entre 10 e 100 caracteres',
+        }))
+      }
+      if (AboutState.sobre && AboutState.sobre.length > 9 && AboutState.sobre.length < 101) {
+        setError(({
+          errorAbout: '',
+        }))
+      }
     }
   }
 
@@ -40,6 +53,7 @@ function AboutUser() {
             defaultValue={AboutState.sobre}
             onChange={handleOnChange}
           />
+          {error.errorAbout&& <p>{error.errorAbout}</p>}
           </div>
         </form>
         <button

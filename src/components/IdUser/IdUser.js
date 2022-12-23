@@ -16,9 +16,7 @@ function IdUser() {
   const [userSenha, setUserSenha] = useState({
     senha: '',
   });
-  const [userSenhaConfirm, setUserSenhaConfirm] = useState({
-    senhaConfirm: '',
-  });
+  const [userSenhaConfirm, setUserSenhaConfirm] = useState('');
   const [userNascimento, setUserNascimento] = useState({
     nascimento: '',
   });
@@ -32,7 +30,7 @@ function IdUser() {
 
   function handleOnChange({ target }) {
     const emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i;
-    const { type, value, name } = target;
+    const { type, value } = target;
     if (type === 'text') {
       setUserName(({
         nome: value,
@@ -73,20 +71,6 @@ function IdUser() {
       if (userSenha.senha && userSenha.senha.length >= 4) {
         setErrors(({
           errorSenha: '',
-        }));
-      }
-    } else if (name === 'senhaConfirm') {
-      setUserSenhaConfirm(({
-        senhaConfirm: value,
-      }));
-      if (!userSenhaConfirm.senhaConfirm || userSenhaConfirm.senhaConfirm !== userSenha.senha) {
-        setErrors(({
-          errorSenhaConfirm: 'As senhas devem ser iguais',
-        }));
-      }
-      if (userSenhaConfirm.senhaConfirm && userSenhaConfirm.senhaConfirm === userSenha.senha) {
-        setErrors(({
-          errorSenhaConfirm: '',
         }));
       }
     } else if (type === 'date') {
@@ -150,7 +134,7 @@ function IdUser() {
                 className="InputPassword"
                 name="senhaConfirm"
                 value={userSenhaConfirm.senhaConfirm}
-                onChange={handleOnChange}
+                onChange={(event) => setUserSenhaConfirm.senhaConfirm(event.target.value)}
               />
               {errors.errorSenhaConfirm && <p>{errors.errorSenhaConfirm}</p>}
             </div>

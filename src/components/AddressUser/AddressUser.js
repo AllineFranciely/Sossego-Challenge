@@ -41,9 +41,14 @@ function AddressUser() {
       setCepAddressState(({
         cep: value,
       }));
-      if (!cepAddressState.cep || cepAddressState.cep < 9) {
+      if (!cepAddressState.cep || cepAddressState.cep.length < 9) {
         setErrors(({
           errorCEP: 'O CEP deve ter no mínimo 9 caracteres e formato 00000-000',
+        }));
+      }
+      if (cepAddressState.cep && cepAddressState.cep.length >= 8) {
+        setErrors(({
+          errorCEP: '',
         }));
       }
     }
@@ -54,6 +59,11 @@ function AddressUser() {
       if (!ruaAddressState.rua) {
         setErrors(({
           errorRua: 'Preencha com o nome da rua',
+        }));
+      }
+      if (ruaAddressState.rua && ruaAddressState.rua.length >= 2) {
+        setErrors(({
+          errorRua: '',
         }));
       }
     }
@@ -71,7 +81,7 @@ function AddressUser() {
       setBairroAddressState(({
         bairro: value,
       }));
-      if (!bairroAddressState) {
+      if (!bairroAddressState || bairroAddressState.length < 3) {
         setErrors(({
           errorBairro: 'Preencha com o nome do bairro',
         }));
